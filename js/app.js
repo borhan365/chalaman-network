@@ -37,51 +37,36 @@ getCancelBtn.addEventListener('click', () => {
   modal.classList.remove("active")
 })
 
-// Swiper slider home page product slider
-var ProductSlider = new Swiper(".productSlider", {
-    slidesPerView: 2,
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-    },
-    breakpoints: {
-        640: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        },
-        767: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-        },
-        1024: {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        },
-    }
-  });
 
-  // Campaign slider
-  var campaignSlider = new Swiper(".campaignSlider", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-          640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-          },
-          767: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-          },
-          1024: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-          },
-      }
-    });
+// tabs => SEO Pricing / Reporting / Accountability
+function latestPopularTabs(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+// sticky navbar
+window.onscroll = () => {
+
+  // click to top
+  const topBtn = document.getElementById("top");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.classList.add("active")
+  } else {
+    topBtn.classList.remove("active")
+  }
+
+  topBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  })
+}
