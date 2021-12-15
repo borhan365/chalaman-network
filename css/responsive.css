@@ -106,13 +106,13 @@
         flex-direction: column;
     }
     .footer-section{
-        margin-top: 60px;
+        margin-top: 20px;
         height: unset;
     }
     .footer-logo-thumb {
         position: relative;
         margin: unset;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         width: 173px;
     }
     .footer-logo-thumb img {
@@ -272,7 +272,7 @@
         font-size: 17px;
     }
     .our-core-value-content p {
-        font-size: 14px;
+        font-size: 15px;
         text-align: start;
     }
     .hero-content-buttons{
@@ -280,7 +280,7 @@
         margin-bottom: 20px;
     }
     .hero-shape {
-        right: -10px;
+        right: 0px;
         width: 50px;
         bottom: 0;
         transform: rotate(180deg);
@@ -314,7 +314,7 @@
         margin-top: 20px;
     }
     .portfolio-item{
-        height: 128px;
+        height: 134px;
     }
     .single-title span{
         line-height: 40px;
@@ -324,5 +324,18 @@
     }
     .thumb-title {
         top: 185px;
+    }
+    .our-core-value-wrapper h2 {
+        line-height: 45px;
+    }
+    .our-service-section {
+        padding: 30px 0px;
+    }
+    .up-arrow {
+        height: 40px;
+        width: 40px;
+    }
+    .up-arrow img{
+        padding: 7px;
     }
 }
